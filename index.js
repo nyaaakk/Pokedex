@@ -2,7 +2,7 @@
 
 window.onload = init;
 
-let getApiData = async() => {
+let getAllPokemon = async() => {
     let response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=151&offset=0");
     return await response.json();
 };
@@ -35,6 +35,7 @@ async function getPokeList(){
 
 async function getPokeInfo(noPokemon){
     let pokemon = getPokemon(noPokemon);
+
 }
 
 function init(){
