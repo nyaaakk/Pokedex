@@ -13,7 +13,7 @@ let getPokemon = async(noPokemon) => {
 }
 
 async function getPokeList(){
-    let listPokemon = getApiData();
+    let listPokemon = getAllPokemon();
 
     listPokemon.then((result) => {
         let pokeList = document.getElementById("poke-list");
@@ -23,7 +23,7 @@ async function getPokeList(){
             let imgPoke = document.createElement("img");
 
             imgPoke.src = `assets/poke-icons/${i+1}.png`;
-            option.setAttribute("onclick", `getPokeInfo(${i+1})`);
+            //option.setAttribute("onclick", `getPokeInfo(${i+1})`);
             option.innerHTML = `${i+1} - ${result.results[i].name}`;
             option.appendChild(imgPoke);
             pokeList.appendChild(option);
@@ -33,11 +33,19 @@ async function getPokeList(){
 
 };
 
-async function getPokeInfo(noPokemon){
+/*async function getPokeInfo(noPokemon){
     let pokemon = getPokemon(noPokemon);
 
-}
+};*/
 
 function init(){
     getPokeList();
 };
+
+function showLogin(){
+    document.getElementById('login-modal').style.display = 'block';
+}
+
+function closeLogin(){
+  document.getElementById('login-modal').style.display = 'none';
+}

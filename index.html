@@ -41,7 +41,7 @@
           </ul>
           <div class="spacer flex-grow-1"></div>
           <div class="text-end">
-            <button type="button" class="btn btn-outline-light me-2">
+            <button type="button" class="btn btn-outline-light me-2" onclick="showLogin()">
               Login
             </button>
             <a href="signup.html">
@@ -56,12 +56,7 @@
         <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 padding-0">
           <input type="text" id="poke-filter" placeholder="Search" />
           <ol id="poke-list">
-            //liste
-
-
-
-
-            //...
+            
           </ol>
         </div>
         <div class="col-lg-9 col-md-8 col-sm-12 col-xs-12" id="poke-details">
@@ -178,7 +173,7 @@
           <form>
             <div class="modal-header">
               <h5 class="modal-title">Login</h5>
-              <button type="button" class="btn-close"></button>
+              <button type="button" class="btn-close" onclick="closeLogin()"></button>
             </div>
             <div class="modal-body">
               <div class="mb-3">
@@ -195,7 +190,7 @@
               </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary">Close</button>
+              <button type="button" class="btn btn-secondary" onclick="closeLogin()">Close</button>
               <button type="button" class="btn btn-primary">Login</button>
             </div>
           </form>
